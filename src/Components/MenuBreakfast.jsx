@@ -21,7 +21,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
               className="menu-items"
               key={item.id}
               variants={itemContainer}
-              transition={{ delay: 0, duration: 0.3 }}
+              transition={{ delay: i * 0.2  }}
             >
               <img src={imgBreakfastMenu} alt="food burger" />
               <motion.div className="item-content">

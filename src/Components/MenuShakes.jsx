@@ -8,6 +8,7 @@ const MenuShakes = ({ shakes, items }) => {
       y: 0,
       opacity: 1,
     },
+    exit: { opacity: 0 } // Aggiunto per uscita rapida
   };
   return (
     <>
