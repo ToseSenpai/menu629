@@ -8,6 +8,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
       y: 0,
       opacity: 1,
     },
+    exit: { opacity: 0 } // Aggiunto per uscita rapida
   };
 
   return (
@@ -20,7 +21,7 @@ const MenuBreakfast = ({ breakfast, items }) => {
               className="menu-items"
               key={item.id}
               variants={itemContainer}
-              transition={{ delay: i * 0.2 }}
+              transition={{ delay: 0, duration: 0.3 }}
             >
               <img src={imgBreakfastMenu} alt="food burger" />
               <motion.div className="item-content">
