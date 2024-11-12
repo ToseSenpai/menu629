@@ -1,0 +1,138 @@
+/* MenuDrink.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.menu-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-title {
+  position: relative;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #1877F2, #145dbf, #1d4e89);
+  background-size: 300% 300%; /* Aumenta la dimensione del gradiente per un effetto più dinamico */
+  animation: gradientAnimation 5s ease infinite; /* Applica l'animazione */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
+.menu-title:hover {
+  background-color: #145dbf;
+}
+
+.menu-title h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.menu-title span {
+  font-size: 1.5em;
+}
+
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.menu-content.show {
+  max-height: 2000px; /* Altezza massima per il contenuto espanso */
+  padding: 15px;
+}
+
+.drink-item {
+  margin-bottom: 15px;
+}
+
+.drink-item h3 {
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drink-item p {
+  margin: 5px 0 0;
+  color: #333;
+}
+
+.price {
+  font-weight: bold;
+  color: #1877F2;
+}
+
+@media (max-width: 600px) {
+  .menu-title h2 {
+    font-size: 1em;
+  }
+
+  .menu-title span {
+    font-size: 1.2em;
+  }
+
+  .drink-item h3 {
+    font-size: 0.9em;
+  }
+
+  .drink-item p {
+    font-size: 0.8em;
+  }
+}
+
+
+/* Layout desktop */
+.drink-item h3 {
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Layout mobile */
+@media (max-width: 600px) {
+  .drink-item h3 {
+    display: block; /* Passa a blocco per la versione mobile */
+  }
+
+  .price {
+    display: block;
+    text-align: right; /* Allinea il prezzo a destra */
+    margin-top: 5px; /* Aggiungi uno spazio sopra il prezzo, se necessario */
+  }
+}
