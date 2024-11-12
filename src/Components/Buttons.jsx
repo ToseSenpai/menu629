@@ -2,7 +2,7 @@
 /**@jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes }) => {
+const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes, setDrink }) => {
   const breakpoints = [576, 768, 992, 1200];
 
   const mq = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
@@ -64,6 +64,7 @@ const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes }) => {
           setBreakfast(false);
           setLunch(false);
           setShakes(false);
+          setDrink(false);
         }}
       >
         <span>Finger Foods</span>
@@ -75,6 +76,7 @@ const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes }) => {
           setFinger(false);
           setLunch(false);
           setShakes(false);
+          setDrink(false);
         }}
       >
         <span>Pizza & Focaccia</span>
@@ -86,6 +88,7 @@ const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes }) => {
           setFinger(false);
           setBreakfast(false);
           setShakes(false);
+          setDrink(false);
         }}
       >
         <span>Hamburger</span>
@@ -97,9 +100,22 @@ const Buttons = ({ setFinger, setBreakfast, setLunch, setShakes }) => {
           setFinger(false);
           setBreakfast(false);
           setLunch(false);
+          setDrink(false);
         }}
       >
         <span>Dolci</span>
+      </button>
+
+      <button
+        onClick={() => {
+          setDrink(true);
+          setFinger(false);
+          setBreakfast(false);
+          setLunch(false);
+          setShakes(false);
+        }}
+      >
+        <span>Drink</span>
       </button>
     </div>
   );

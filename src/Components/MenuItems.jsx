@@ -7,8 +7,9 @@ import Finger from "./MenuFinger";
 import Breakfast from "./MenuBreakfast";
 import Lunch from "./MenuLunch";
 import Shakes from "./MenuShakes";
+import Drink from "./MenuDrink";
 
-const MenuItems = ({ items, finger, breakfast, lunch, shakes }) => {
+const MenuItems = ({ items, finger, breakfast, lunch, shakes, drink }) => {
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -102,10 +103,11 @@ const MenuItems = ({ items, finger, breakfast, lunch, shakes }) => {
         }
       `}
     >
-      <Finger finger={finger} items={items} />
-      <Breakfast breakfast={breakfast} items={items} />
-      <Lunch lunch={lunch} items={items} />
-      <Shakes shakes={shakes} items={items} />
+      {finger && <Finger finger={finger} items={items} />}
+{breakfast && <Breakfast breakfast={breakfast} items={items} />}
+{lunch && <Lunch lunch={lunch} items={items} />}
+{shakes && <Shakes shakes={shakes} items={items} />}
+{drink && <Drink drink={drink} items={items} />}
     </motion.div>
   );
 };

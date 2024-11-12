@@ -12,6 +12,7 @@ function App() {
   const [breakfast, setBreakfast] = useState(false);
   const [lunch, setLunch] = useState(false);
   const [shakes, setShakes] = useState(false);
+  const [drink, setDrink] = useState(false);
 
   return (
     <div
@@ -27,6 +28,7 @@ function App() {
         setBreakfast={setBreakfast}
         setLunch={setLunch}
         setShakes={setShakes}
+        setDrink={setDrink}
       />
 
       <MenuItems
@@ -35,6 +37,7 @@ function App() {
         breakfast={breakfast}
         lunch={lunch}
         shakes={shakes}
+        drink={drink}
       />
 
       <Global

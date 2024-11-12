@@ -532,6 +532,13 @@ const menuData = [
     price: 5.00,
     desc: "",
   },
+  {
+    id: 211,
+    title: "Coca cola",
+    category: "drink",
+    price: 5.00,
+    desc: "",
+  },
 
 
 ];
